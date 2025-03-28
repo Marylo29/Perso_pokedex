@@ -23,7 +23,8 @@ Les régions
 Le but de ce projet :
 ---------------------
 
-Un pokédex developpé avec une table des types et une recherche avancé comme par exemple : |
+Un pokédex developpé avec une table des types et une recherche avancé comme par exemple :
+
 * Tri :
     - Par type
     - Par stats
