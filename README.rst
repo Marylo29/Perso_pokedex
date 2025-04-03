@@ -6,9 +6,9 @@ Projet Pokédex
 
 Le **Pokedex** est un outil dans lequel est recensé tout les pokémons d'un région
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Remarque : on ditingue le pokédex nationnal du pokédex régionnal
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Remarque : on distingue le pokédex nationnal du pokédex régionnal
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ^^^^^^^^^^^
 Les régions
@@ -34,6 +34,7 @@ Mise à jours pour plus tard :
 -----------------------------
 
 Un pokédex developpé avec une table des types et une recherche avancé comme par exemple : 
+
 * Tri :
     - Par type
     - Par stats
