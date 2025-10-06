@@ -1,12 +1,13 @@
-import pandas as pd
+#import pandas as pd
+from csv import DictReader
 
 """Module of the core version of pokedex."""
+with open('sources/Pokemon_en.csv') as csvfile:
+    reader = DictReader(csvfile)
+    pokedex_en = list(reader)
+#type_table_csv = pd.read_csv("sources/type_table.csv",sep = ';')
 
-pokedex_en = pd.read_csv("sources/Pokemon_en.csv",sep = ',')
-type_table_csv = pd.read_csv("sources/type_table.csv",sep = ';')
-
-
-def make_list_type_table(data:pd.DataFrame) -> list[dict]:
+def make_list_type_table(data) -> list[dict]: #:pd.DataFrame
     """
     Convert a .csv table type file into a list of dict
 
@@ -30,8 +31,8 @@ def make_list_type_table(data:pd.DataFrame) -> list[dict]:
         type_table.append(new.copy())
     return type_table
 
-types_en = ['Grass', 'Fire', 'Water', 'Bug', 'Normal', 'Poison', 'Electric', 'Ground', 'Fairy', 'Fighting', 'Psychic', 'Rock', 'Ghost', 'Ice', 'Dragon', 'Dark', 'Steel', 'Flying']
-types_table_fr = make_list_type_table(type_table_csv)
+#types_en = ['Grass', 'Fire', 'Water', 'Bug', 'Normal', 'Poison', 'Electric', 'Ground', 'Fairy', 'Fighting', 'Psychic', 'Rock', 'Ghost', 'Ice', 'Dragon', 'Dark', 'Steel', 'Flying']
+#types_table_fr = make_list_type_table(type_table_csv)
 
 class Pokemon:
     def __init__(self,identifiant:int,name:str,form:str,types:tuple,stats:tuple,gen:int):
@@ -114,8 +115,4 @@ class Pokemon:
         return f"ID : {self.id}, Nom : {self.nom}, Surnom : {self.surnom}, Forme : {self.forme}, Types : {self.types}, Stats : {self.stats}, Genération : {self.gen}"
 
 if __name__ == "__main__":
-    pokedex_liste = []
-    for pokemon_spe in pokedex_en.itertuples():
-        pokedex_liste.append(Pokemon(pokemon_spe[1],pokemon_spe[2],pokemon_spe[3],tuple(pokemon_spe[4:6]),tuple(pokemon_spe[6:13]),pokemon_spe[13]))
-    for pokemon in pokedex_liste:
-        print(pokemon)
+    print(pokedex_en)
